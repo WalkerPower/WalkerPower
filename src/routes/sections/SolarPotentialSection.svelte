@@ -57,15 +57,15 @@
   // Basic settings
   let monthlyAverageEnergyBill: number = 300;
   let energyCostPerKwh = 0.31;
-  let panelCapacityWatts = 400;
-  let solarIncentives: number = 7000;
+  let panelCapacityWatts = 430;
+  let solarIncentives: number = 1530;
   let installationCostPerWatt: number = 4.0;
-  let installationLifeSpan: number = 20;
+  let installationLifeSpan: number = 25;
 
   // Advanced settings
   let dcToAcDerate = 0.85;
   let efficiencyDepreciationFactor = 0.995;
-  let costIncreaseFactor = 1.022;
+  let costIncreaseFactor = 1.092;
   let discountRate = 1.04;
 
   // Solar installation

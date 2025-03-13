@@ -47,7 +47,7 @@
   export let map: google.maps.Map;
 
   const icon = 'home';
-  const title = 'Building Insights endpoint';
+  const title = 'Pauls Building Insights endpoint';
 
   let requestSent = false;
   let requestError: RequestError | undefined;

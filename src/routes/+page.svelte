@@ -27,11 +27,11 @@
 
   const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const defaultPlace = {
-    name: 'Rinconada Library',
-    address: '1213 Newell Rd, Palo Alto, CA 94303',
+    name: 'Walker House in Union',
+    address: '1049 Brighton St, Union, NJ  07083',
   };
   let location: google.maps.LatLng | undefined;
-  const zoom = 19;
+  const zoom = 21;
 
   // Initialize app.
   let mapElement: HTMLElement;
