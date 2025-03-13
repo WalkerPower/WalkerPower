@@ -1,3 +1,4 @@
+material taken from js-solar-potential
 [![Build](https://github.com/googlemaps-samples/js-solar-potential/actions/workflows/build.yml/badge.svg)](https://github.com/googlemaps-samples/js-solar-potential/actions/workflows/build.yml)
 [![Tests](https://github.com/googlemaps-samples/js-solar-potential/actions/workflows/tests.yml/badge.svg)](https://github.com/googlemaps-samples/js-solar-potential/actions/workflows/tests.yml)
 
