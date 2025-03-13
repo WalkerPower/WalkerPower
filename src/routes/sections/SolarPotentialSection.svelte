@@ -56,7 +56,7 @@
 
   // Basic settings
   let monthlyAverageEnergyBill: number = 300;
-  let energyCostPerKwh = 0.31;
+  let energyCostPerKwh = 0.21;
   let panelCapacityWatts = 430;
   let solarIncentives: number = 1530;
   let installationCostPerWatt: number = 4.0;

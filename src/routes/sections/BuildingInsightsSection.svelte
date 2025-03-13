@@ -47,7 +47,7 @@
   export let map: google.maps.Map;
 
   const icon = 'home';
-  const title = 'Pauls Building Insights endpoint';
+  const title = 'Your Escape from the Utility';
 
   let requestSent = false;
   let requestError: RequestError | undefined;
