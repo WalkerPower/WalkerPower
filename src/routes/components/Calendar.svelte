@@ -55,59 +55,54 @@
   </md-text-button>
 
   {#if opened}
-    <div
-      class="fixed top-0 left-0 w-full h-full z-10"
-      role={undefined}
-      on:click={() => (opened = false)}
-    />
+  div
+  class="fixed top-0 left-0 w-full h-full z-10"
+  role={undefined}
+  on:click={() => (opened = false)}
+/>
 
-    <div
-      class="surface-variant on-surface-variant-text absolute right-4 w-auto p-4 rounded-lg shadow-lg z-20"
-    >
-      <div class="px-4 pb-4">
-        <Dropdown
-          value={month.toString()}
-          options={Object.fromEntries(months.map((month, i) => [i.toString(), month]))}
-          onChange={async (value) => {
-            month = Number(value);
-            onChange(month, day);
-          }}
-        />
-      </div>
+<div
+  class="surface-variant on-surface-variant-text absolute right-4 w-auto p-4 rounded-lg shadow-lg z-20"
+>
+<div class="px-4 pb-4">
+  <Dropdown
+    value="annual Sunshine"
+    options={{ "annual Sunshine": "annual Sunshine" }}
+    onChange={async (value) => {
+      // No need to update month as we are only showing one option
+      onChange(month, day);
+    }}
+    disabled
+  />
+</div>
 
-      <table>
-        {#each [...Array(Math.ceil(monthDays[months[month]] / numCols)).keys()] as row}
-          <tr>
-            {#each [...Array(numCols).keys()] as col}
-              <td>
-                {#if day == dayFrom(row, col)}
-                  <button
-                    class="primary on-primary-text relative w-8 h-8 rounded-full"
-                    on:click={() => {
-                      opened = false;
-                    }}
-                  >
-                    <md-ripple />
-                    {dayFrom(row, col)}
-                  </button>
-                {:else if dayFrom(row, col) <= monthDays[months[month]]}
-                  <button
-                    class="relative w-8 h-8 rounded-full"
-                    on:click={async () => {
-                      day = dayFrom(row, col);
-                      opened = false;
-                      onChange(month, day);
-                    }}
-                  >
-                    <md-ripple />
-                    {dayFrom(row, col)}
-                  </button>
-                {/if}
-              </td>
-            {/each}
-          </tr>
-        {/each}
-      </table>
-    </div>
+<table>
+  {#each [...Array(Math.ceil(monthDays[months[month]] / numCols)).keys()] as row}
+    <tr>
+      {#each [...Array(numCols).keys()] as col}
+        <td>
+          {#if day == dayFrom(row, col)}
+            <button
+              class="primary on-primary-text relative w-8 h-8 rounded-full"
+              disabled
+            >
+              <md-ripple />
+              {dayFrom(row, col)}
+            </button>
+          {:else if dayFrom(row, col) <= monthDays[months[month]]}
+            <button
+              class="relative w-8 h-8 rounded-full"
+              disabled
+            >
+              <md-ripple />
+              {dayFrom(row, col)}
+            </button>
+          {/if}
+        </td>
+      {/each}
+    </tr>
+  {/each}
+</table>
+</div>
   {/if}
 </div>
